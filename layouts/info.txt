@@ -1,4 +1,0 @@
-curl -T test.tmp -u  hoshdar:gosvidar_i^21 ftp://172.16.1.12
-
-(First install ImageMagick)
-convert -delay 100 -loop 0 *.png Indian.gif
