@@ -1,0 +1,45 @@
+#%Module1.0#####################################################################
+##
+## modules Forecast
+##
+## modulefiles/Forecast. Written by Farrokh A. Ghavanini
+##
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "\tForecast - Loades the required environmental variables for INCOH Wind & Wave Forecast System"
+        puts stderr "\n\tINCOH Forecast System is set by Farrokh A. Ghavanini"
+        puts stderr "\tVersion $version\n"
+}
+
+module-whatis	"Sets the environment for running INCOH Forecast System Jobs"
+
+# for Tcl script use only
+set	homedir		/home/iwf
+set	mcrdir		/usr/local/MATLAB/MATLAB_Compiler_Runtime/v81
+set	version		1.0.0
+
+setenv		NCARG_ROOT	/usr
+setenv		NCARG_LIB	/usr/lib64/ncarg
+setenv		NCARG_DATABASE	/usr/lib64/ncarg/database
+setenv		NCARG_FONTCAPS	/usr/lib64/ncarg/fontcaps
+setenv		NCARG_GRAPHCAPS	/usr/lib64/ncarg/graphcaps
+setenv		NCARG_NCARG	/usr/share/ncarg
+setenv		XAPPLRESDIR	/usr/local/MATLAB/MATLAB_Compiler_Runtime/v81/X11/app-defaults
+prepend-path    PATH            /bin
+prepend-path    PATH            /sbin
+prepend-path    PATH            /usr/bin
+prepend-path    PATH            /usr/sbin
+prepend-path    PATH            /usr/local/bin
+prepend-path    PATH            /usr/local/sbin
+prepend-path    PATH            /usr/local/bin
+prepend-path    PATH            $homedir/mpich-install/bin
+prepend-path    PATH            $homedir/ww3-install/bin
+prepend-path    PATH            $homedir/ww3-install/exe
+prepend-path    PATH            $homedir/grib2/wgrib2
+prepend-path    LD_LIBRARY_PATH $mcrdir/runtime/glnxa64
+prepend-path    LD_LIBRARY_PATH $mcrdir/bin/glnxa64
+prepend-path    LD_LIBRARY_PATH $mcrdir/sys/os/glnxa64
+prepend-path    LD_LIBRARY_PATH $mcrdir/sys/java/jre/glnxa64/jre/lib/amd64/native_threads
+prepend-path    LD_LIBRARY_PATH $mcrdir/sys/java/jre/glnxa64/jre/lib/amd64/server
+prepend-path    LD_LIBRARY_PATH $mcrdir/sys/java/jre/glnxa64/jre/lib/amd64
